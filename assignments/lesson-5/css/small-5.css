@@ -6,6 +6,7 @@ body {
   font-size: 16px;
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 400;
+  background-color: #FFFAFA; 
   /* Declare the base font-family - from google font api or other */
 }
 
