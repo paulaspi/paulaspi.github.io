@@ -3,20 +3,16 @@
     
     
     
-    nav ul li { float: left;} 
-    
-    
   
-    nav button { display: none; }  /* hamburger button does not need to be shown */
-    
+	
     header img { width: 18%;
                 margin: 1px;}
     
     article { overflow: auto; }
    
-    main figure img { width: 40%;
+    main figure img { /*width: 40%;
                       margin-left: 25%;
-                      }
+                      */}
     
     main section picture { width: 50%;
                            }

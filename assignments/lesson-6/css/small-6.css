@@ -17,35 +17,50 @@ header, nav, main, footer { /* the comma means apply the following CSS declarati
 }
 
 header {}
+
+header figure { width: 20%;
+            margin: 0 2% 0 0;
+			float: left;
+			}
+header figure img { width: 100%;}			
+
 header h1 { font-size: 50px;
             color: #2B4B6F;
-            text-align: center;
-            }
-header figure .logoImg { width: 20%;
-            margin: 1px;}
-header figure .logoImg img { width: 100%;}			
+            
+            
+			}
 			
 header .subheading { font-size: 22px;
-                     text-align: center;
-                    }
+                     
+                    
+					}
 
-nav {}
-nav button {}
+nav { background-color: #297B48; }
+nav button { margin: .2rem 2%;
+			background-color: transparent;
+			border: none;
+			font-size: 1.6rem;
+			color: #fff;
+			}
+			
 nav ul  { list-style-type: none;
              margin: 0;
              padding: 0;
-             
-            }
-nav ul li { background-color: #297B48;}
+             }
+			 
+nav ul li { }
+
 nav ul li a { display: block;
               color: #FFFFFF; 
-              text-align: center;
-              padding: 14px 16px;
+              padding: .8rem 2%;
               text-decoration: none;
               font-size: 26px;
+			  border-top: 1px solid rgba(0,0,0,0.3);
             }
-nav ul li.active a { background-color: #423075; }
-nav ul li a:hover { background-color: darkseagreen; }
+nav ul li.active a { background-color: rgba(0,0,0,0.2); }
+nav ul li a:hover { background-color: rgba(0,0,0,0.4); }
+
+nav ul.hide {display: none;}
 
 main {}
 main h2 { font-size: 35px;
@@ -93,3 +108,10 @@ footer>p {} /* This structure refers to p elements that are direct children of t
 .current { color: #2B4B6F;
         font-weight: bold;
         font-size: 24px; }
+
+/*clearfix prevents elements from collapsing*/		
+.clearfix:after {
+	content: "";
+	display: table;
+	clear: both;
+}
