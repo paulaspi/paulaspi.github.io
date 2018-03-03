@@ -1,0 +1,29 @@
+@media only screen and (min-width: 37.5em) {
+  /* Only CSS rules that need to be changed to meet the layout needs from small to medium go in here */
+    
+    
+    
+  
+	
+    header img { width: 18%;
+                margin: 1px;}
+    
+    article { overflow: auto; }
+   
+    main figure img { /*width: 40%;
+                      margin-left: 25%;
+                      */}
+    
+    main section picture { width: 50%;
+                           }
+  
+  section.forecast { display: block;
+                    text-align: center;
+                    clear: both;
+                    }  /* show the 10-day forecast with the medium view and up */
+  
+    section table { margin: auto; }
+  article p.town-article img { width: 42.666%; float:right; }  /* responsive images */
+
+    .photoGrid { grid-template-columns: repeat(2, 1fr);}
+}
