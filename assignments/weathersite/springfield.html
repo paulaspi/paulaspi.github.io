@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Weather in Springfield</title>
+        <meta name="author" content="Paula Spitale">
+        <meta name="description" content="Weather conditions for the city of Springfield">
+        <!-- external style references in the proper cascading order -->    
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">  <!-- Google API font reference -->
+        <link href="css/normalize.css" rel="stylesheet"> <!-- normalize useragent/browser defaults -->
+        <link href="css/small.css" rel="stylesheet">    <!-- default styles - small/phone views -->
+        <link href="css/medium.css" rel="stylesheet">  <!-- medium/tablet views -->
+        <link href="css/large.css" rel="stylesheet">   <!-- large/wide/desktop views --> 
+    </head>
+    
+    <body>
+
+        <header class="clearfix">
+            <figure>
+                <img src="images/weather-vane-wind-sky-north-pixrl-180.jpg" alt="The site logo">
+            </figure>
+            <h1>Easy Weather</h1>
+            <div class="subheading">Weather made easy</div>
+        </header>
+
+        <!-- site navigation use placeholder references -->
+  
+        <nav class="clearfix">
+            <button onclick="toggleNavMenu()">&#9776;</button>
+                <ul id="primaryNav" class="hide">
+    	           <li><a href="index.html">Home</a></li>
+    	           <li><a href="franklin.html">Franklin</a></li>
+    	           <li><a href="greenville.html">Greenville</a></li>
+    	           <li class="active"><a href="springfield.html">Springfield</a></li>
+    	           <li><a href="stormcenter.html">Storm Center</a></li>
+    	           <li><a href="gallery.html">Gallery</a></li>
+                </ul>		
+        </nav>
+    
+        <main>
+            <h2>The City of Springfield</h2>
+            <figure class="mainFirstPic">
+                <img src="images/franklin-regular-930.jpg" alt="sunny landscape" sizes="100vw"
+				srcset="images/franklin-small-500.jpg 400w,
+						images/franklin-medium-700.jpg 700w,
+						images/franklin-large-930.jpg 930w"> 
+            </figure>
+    
+            <section>
+            <h3>Weather Summary</h3>    
+            <div class="highlow">
+                <p>Current temperature: <span id="currentTemp">90</span>&deg;F</p>
+                <p>High: <span id="highTemp">90</span>&deg;F</p>  
+                <p>Low: <span id="lowTemp">66</span>&deg;F</p>  
+            </div>
+            
+            <div class="current">
+                <p><span id="currentWeather">Sunny</span></p>
+                <picture class="sunnypic">
+                    <img src="placeholder.gif" alt="Current weather" id="weather_icon">
+                </picture>
+            
+            </div>   
+            
+            <div class="conditions">
+                <p>Today's Forecast: <span id="todayForec"></span></p>
+                <p>Precipitation: <span id="precip">0</span></p>  
+                <p>Wind Speed: <span id="windSpeed">5</span> mph SW</p>
+                <p>Wind Chill Temperature:<span id="windchill"></span></p>
+            </div>           
+            </section>
+        
+        <section class="forecast">
+            <h3>10 Day Forecast</h3>
+            <table>
+	           <thead>
+                <tr>
+                    <th>Day 1</th>
+                    <th>Day 2</th>
+                    <th>Day 3</th>
+                    <th>Day 4</th>
+                    <th>Day 5</th>
+                    <th>Day 6</th>
+                    <th>Day 7</th>
+                    <th>Day 8</th>
+                    <th>Day 9</th>
+                    <th>Day 10</th>
+                </tr>
+		      </thead>
+              <tbody>  
+                <tr>
+                    <td>89&deg;F</td>
+                    <td>87&deg;F</td>
+                    <td>78&deg;F</td>
+                    <td>75&deg;F</td>
+                    <td>72&deg;F</td>
+                    <td>72&deg;F</td>
+                    <td>79&deg;F</td>
+                    <td>83&deg;F</td>
+                    <td>85&deg;F</td>
+                    <td>89&deg;F</td>
+                </tr>
+		      </tbody>
+            </table>
+        </section>
+      
+        <article>
+          <h3>Springfield Breaks Record</h3>	
+          
+            <p class="town-article">
+                <img src="images/car%20on%20street-450.jpg" alt="Cars on street">
+				The city of Springfield has seen extremely hot weather this past spring. This has been the hottest Spring season in the last twenty years! Much of this phenomenon is  the result of warm winds coming in from the southeast, and the lack of humidity. Our metheoroligists are optimistics that the next season will bring the much more needed rain to our beautiful city.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer et condimentum nunc, nec gravida leo. Mauris venenatis sit amet felis sit amet volutpat. Proin sodales suscipit est, sed tincidunt mauris molestie vel. Mauris congue, elit eget tincidunt facilisis, enim massa vehicula urna, ut maximus urna mauris sit amet tellus. Quisque egestas, tellus et tempor auctor, quam mauris gravida dui, in interdum dui erat ultricies augue. Aliquam erat volutpat. Pellentesque ultricies malesuada blandit. Morbi cursus fringilla lacus ac vestibulum. In a lacus dignissim, cursus enim at, maximus tortor. Maecenas sed nisl massa. Nulla placerat ut justo ac pharetra. Aliquam auctor nisl urna, sed placerat ipsum semper vitae. Nunc pretium, diam quis volutpat laoreet, nibh augue hendrerit ante, et ultricies est massa eu sapien. Ut feugiat a lacus at ornare. Praesent aliquet placerat velit at dignissim. In hac habitasse platea dictumst. Aenean maximus est sed ex accumsan, id lacinia dui dignissim. In hac habitasse platea dictumst. Mauris porttitor purus id commodo suscipit. Sed sed pretium odio. Curabitur scelerisque metus in ligula imperdiet consectetur. Mauris cursus sapien at suscipit suscipit. Donec non nibh vel ex lacinia porttitor.
+          </p>
+		</article>		  
+  
+    </main>
+    
+    <footer>
+        <aside>
+            Easy Weather
+            <br>
+            123 Main St.
+            <br>
+            (123)456-7890
+            <br>
+            contact@theurl.com
+        </aside>
+        <p class="footer-bar">&copy;2018 All Rights Reserved | Easy Weather | <span id="currentdate"></span></p>
+    </footer>
+
+    <script src="scripts/hamburger.js"></script>
+    <script src="scripts/currentdate.js"></script>
+    <script src="scripts/windchill.js"></script>
+    <script src="scripts/wu-weather-springfield.js"></script>
+
+</body>
+</html>
