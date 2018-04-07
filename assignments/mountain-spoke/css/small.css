@@ -1,0 +1,195 @@
+/* This main css file contains the default rules and is geared toward the small/phone view */
+
+* { box-sizing: border-box;}  /* This wildcard applies to all elements ensuring a box layout model */
+
+body {
+  font-size: 16px;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 400;
+  background-color: #FFFAFA; 
+  /* Declare the base font-family - from google font api or other */
+}
+
+header, nav, main, footer { /* the comma means apply the following CSS declarations to all of the listed elements */
+  /* Declare the maximum width and other main element rules to limit the stretch on wide views */
+    max-width: 930px;
+    margin: 0 auto;
+}
+
+header {}
+
+header figure { width: 10%;
+            margin: 0 2% 0 0;
+			float: left;
+			}
+header figure img { width: 100%;}			
+
+header h1 { font-size: 40px;
+            color: #0b6785;
+            margin-bottom: -2%;
+            margin-top: 2%;
+			}
+			
+
+nav { background-color: #d52909; }
+nav button { margin: .2rem 2%;
+			background-color: transparent;
+			border: none;
+			font-size: 1.6rem;
+			color: #fff;
+			}
+			
+nav ul  {    
+             display: flex;
+             flex-direction: column;
+              
+              
+             list-style-type: none;
+             margin: 0;
+             padding: 0.3em;
+             }
+			 
+nav ul li { }
+
+nav ul li a { display: block;
+              color: #FFFFFF; 
+              padding: .8rem 2%;
+              text-decoration: none;
+              font-size: 26px;
+			  border-top: 1px solid rgba(0,0,0,0.3);
+            }
+nav ul li.active a { background-color: rgba(0,0,0,0.2); }
+nav ul li a:hover { background-color: rgba(0,0,0,0.4); }
+
+nav ul.hide {display: none;}
+
+main {}
+main h2 { font-size: 35px;
+          color: #2B4B6F;
+          text-align: center;
+        clear: both;
+        }
+main figure { margin: 0 0 .2rem 2%; width:96%; }
+main figure img { width: 100%; 
+                  
+                }
+
+main section { text-align: center;
+               }
+
+main h3 { color: #2B4B6F;
+                  font-size: 20px;
+                  margin-bottom: -%2;
+                    }
+
+footer { clear: both;
+        text-align: center;
+        background-color: #75c309;
+        color: #FFFFFF;
+        padding: 2%;
+        font-size: 0.8rem;
+        }
+footer aside {}
+footer>p {} /* This structure refers to p elements that are direct children of the footer element */
+
+footer p a { color: #fff; }
+
+section.home { 
+                display: grid;
+                grid-gap: 3px;
+                justify-items: center;
+                }
+
+figure.shadow { border: 1px solid #d52909;
+                }
+
+figure a h3 { text-decoration: none;
+            color: #09556d;
+            }
+
+.homeText { display: none;}
+
+/*styles for adventure tours page*/
+
+section.tours { display: grid;
+                grid-gap: 3px;
+                justify-items: center;
+                margin-bottom: 6%;
+                }
+
+figure.pictours { border: 3px solid #d52909; }
+
+figure.pictours h3 { color: #09556d; 
+                     font-size: 2rem;
+                    margin-top: -0.5%;
+                    }
+
+/*styling for events page*/
+.eventDescription {
+                margin: 2%;
+                }
+
+#h3event {
+        text-align: center;
+        }
+
+/*form event styling*/
+form#eventR {
+        margin: 1em 3%;
+         
+        }
+
+fieldset { 
+        background-color: #ffdb99;
+        margin: 1.5em;
+        display: flex;
+        }
+
+legend {
+        color: #fff;
+        margin-left: 6%;
+        padding: .5em;
+        border: #664200 solid 1px;
+        background-color: #d52909;
+        }
+
+label { margin: .5em; }
+
+label span {
+        display: block;
+        font-size: 1em;
+        color: #d52909;
+        }
+
+.submitBtn {
+        -webkit-appearance: none; /*remove the apple mobile default styling*/
+        color: #fff;
+        border: #664200 solid 1px;
+        border: 7px;
+        width: 50%;
+        margin: 1em 3%;
+        font-size: 2em;
+        padding: .5em;
+        background: #d52909;
+        box-shadow: 4px 4px 10px #666;
+        }
+
+/*styling for sales page*/
+section.sales { display: grid;
+                grid-gap: 3px;
+                justify-items: center;
+                margin-bottom: 6%;
+                }
+
+figure.picbikes { border: 3px solid #d52909;}
+
+p.price { color: darkred;
+          font-size: 1.5em;
+        }
+
+/*clearfix prevents elements from collapsing*/		
+.clearfix:after {
+	content: "";
+	display: table;
+	clear: both;
+}
