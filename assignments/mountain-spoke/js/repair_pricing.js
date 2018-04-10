@@ -1,24 +1,15 @@
-var table = document.querySelector('table');
+$.getJSON('data/pricing.json', function(data){
+    console.log('it worked!');
+});
+    //var prices = JSON.parse(repair_pricing);
 
-var requestURL = "file://data/pricing.json";
 
-var request = new XMLHttpRequest();
+/*document.getElementById('tire').innerHTML = prices.prices[0];
+document.getElementById('brake').innerHTML = prices.prices[1];
+document.getElementById('spoke').innerHTML = prices.prices[2];
+document.getElementById('shift').innerHTML = prices.prices[3];
+document.getElementById('gold').innerHTML = prices.prices[4];
+document.getElementById('platinum').innerHTML = prices.prices[5];*/
+ 
 
-request.open('GET', requestURL);
 
-request.responseType = 'text';
-
-request.send();
-
-request.onload = function(){
-    var prices = JSON.parse(request.responseText);
-    console.log(prices);
-
-document.getElementById('tire').innerHTML = prices.tire;
-document.getElementById('brake').innerHTML = prices.brake;
-document.getElementById('spoke').innerHTML = prices.spoke;
-document.getElementById('shift').innerHTML = prices.shift;
-document.getElementById('gold').innerHTML = prices.gold;
-document.getElementById('platinum').innerHTML = prices.platinum;
-    
-}

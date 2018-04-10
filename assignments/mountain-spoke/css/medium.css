@@ -7,17 +7,7 @@
     
     header h1 { font-size: 60px;}
     
-    article.homeText {  display: block;
-                        text-align: center;
-                        background-color: #0b6785;
-                        color: #fff;
-                        padding: 2%;
-                        margin: 2%;
-                    }
     
-    article.homeText h2 { color: #fff;
-                          margin: -1%;
-                    }
     
     figure.shadow { width: 70%;}
     

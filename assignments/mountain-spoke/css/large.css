@@ -24,6 +24,18 @@
     
     section.home { grid-template-columns: repeat(3, 1fr); }
     
+    article.homeText {  display: block;
+                        text-align: center;
+                        background-color: #0b6785;
+                        color: #fff;
+                        padding: 2%;
+                        margin: 2%;
+                    }
+    
+    article.homeText h2 { color: #fff;
+                          margin: -1%;
+                    }
+    
     main figure.shadow:hover { box-shadow: 5px 5px #d52909 }
     
     figure.shadow { width: 95%;}
