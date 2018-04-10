@@ -1,8 +1,8 @@
- {
-        "tire" : "$16",
-        "brake" : "$10",
-        "spoke" : "$20",
-        "shift" : "$15",
-        "gold" : "$60",
-        "platinum" : "$90"
-    }
+ { "prices":[
+       { "tire" : "$16"},
+        {"brake" : "$10"},
+        {"spoke" : "$20"},
+        {"shift" : "$15"},
+        {"gold" : "$60"},
+        {"platinum" : "$90"}
+    ]}
