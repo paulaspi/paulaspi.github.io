@@ -3,9 +3,9 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Mountain Spoke | Home</title>
+        <title>Mountain Spoke | Contact</title>
         <meta name="author" content="Paula Spitale">
-        <meta name="description" content="Mountain Spoke specializes in selling bicycles, giving tours and making repairs in Bozeman, MT">
+        <meta name="description" content="Mountain Spoke contact inforamtion">
         <!-- external style references in the proper cascading order -->    
         <link href="https://fonts.googleapis.com/css?family=Oswald:400,600" rel="stylesheet">  <!-- Google API font reference -->
         <link href="css/normalize.css" rel="stylesheet"> <!-- normalize useragent/browser defaults -->
@@ -28,44 +28,52 @@
         <nav class="clearfix">
             <button onclick="toggleNavMenu()">&#9776;</button>
                 <ul id="primaryNav" class="hide">
-    	           <li class="active"><a href="index.html">Home</a></li>
+    	           <li><a href="index.html">Home</a></li>
     	           <li><a href="adventure_tours.html">Adventure Tours</a></li>
     	           <li><a href="event.html">Events</a></li>
     	           <li><a href="sales.html">Sales</a></li>
     	           <li><a href="repairs.html">Repairs</a></li>
-    	           <li><a href="contact.html">Contact</a></li>
+    	           <li class="active"><a href="contact.html">Contact</a></li>
                 </ul>		
         </nav>
         
         <main>
-        
-            <h2>Welcome to our Bicycle World</h2>
-           
-            <section class="home">
-                <figure class="shadow">
-                <a href="adventure_tours.html"><img src="images/home_adventure_280.jpg" alt="two people bicycling on the countryside">
-                    <h3>Go on an Adventure!!</h3></a>
-                </figure>
+            <article id="contactInfo">
+                <h2>Contact Us</h2>
                 
-                <figure class="shadow">
-                <a href="sales.html"><img src="images/home_bicycle_280.jpg" alt="Bicycle in the forest">
-                <h3>Buy a Bicycle!</h3></a>
-                </figure>
+                <p><strong>Phone: </strong>(123)456-7890</p>
                 
-                <figure class="shadow">
-                <a href="repairs.html"><img src="images/home_repairs_280.jpg" alt="Bicycle silhouette">
-                <h3>Repair Shop</h3></a>
-                </figure>
+                <p><strong>Mail: </strong>contact@mountainspoke.com</p>
+                
+                <p><strong>Or Visit Us at: </strong>3950 Valley Commons Dr. Bozeman, MT</p>
+                
+               
             
-            </section>
-            
-            <article class="homeText">
-            <h2>A little about us...</h2>
-                <p>We are a family owned business proudly serving all bicycle enthusiasts. Our story started on 1980, when our grand-father Charles Simmons, started a business guiding people through the beautiful trails that surround the city of Bozeman. Then he realized that he could add some services like selling and repairing bicycles, so that more people could have the opportunity to admire our amazing scenery. Fast forward 40 years, we are still in the business of introducing great people to the great area of Bozeman, Montana. Keep riding on! </p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2787.944325092977!2d-111.09230536993654!3d45.67201798398873!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5345459ab72cb6df%3A0xbb98968f9648ea88!2s3950+Valley+Commons+Dr%2C+Bozeman%2C+MT+59718!5e0!3m2!1sen!2sus!4v1523300448111" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
             
             </article>
-        
-        
+                
+            <form action="message.html" method="get" enctype="multipart/form-data" name="contact" id="contactForm">
+            
+            <fieldset>
+                <legend><span>Send Us a Message</span></legend>
+                
+                <label><span>Full Name</span><input name="fullname" type="text" value="" placeholder="Full Name" pattern="[a-zA-Z -._]{5,99}" required></label>
+                
+                <label><span>Email</span><input name="email" type="email" value="" placeholder="myemail@email.com" required></label>
+                
+                <label><span>Your Message or Comments:</span><textarea name="comments" rows="10" cols="30"></textarea></label>
+                
+                </fieldset>
+                
+                <input type="submit" value="Submit" class="submitBtn">
+                <input name="redirect" type="hidden" value="message.html">
+            
+            
+            </form>
+            
+            
+            
         </main>
         
         <footer>

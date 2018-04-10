@@ -26,3 +26,9 @@
     figure.picbikes { width: 70%;}
     
     .submitBtn { width: 30%;}
+    
+    table { width: 80%;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-bottom: 50%;
+        }

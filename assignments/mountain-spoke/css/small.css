@@ -80,6 +80,7 @@ main section { text-align: center;
 main h3 { color: #2B4B6F;
                   font-size: 20px;
                   margin-bottom: -%2;
+                  text-align: center;
                     }
 
 footer { clear: both;
@@ -172,7 +173,10 @@ label span {
         padding: .5em;
         background: #d52909;
         box-shadow: 4px 4px 10px #666;
+        margin-top: -2%;
         }
+
+.paraEvent { margin-top: -2%;}
 
 /*styling for sales page*/
 section.sales { display: grid;
@@ -186,6 +190,27 @@ figure.picbikes { border: 3px solid #d52909;}
 p.price { color: darkred;
           font-size: 1.5em;
         }
+
+/*styling for contact page*/
+#contactInfo { margin-left: 3%; }
+
+.formMessage { margin-bottom: 30%; }
+
+/*table styling*/
+table { width: 70%;
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-bottom: 50%;
+    }
+
+td { text-align: center;
+     border-bottom: 1px solid #d52909;     
+    }
+
+th { background-color: #ffdb99; 
+     border-bottom: 1px solid #d52909; 
+     color: #d52909;
+    }
 
 /*clearfix prevents elements from collapsing*/		
 .clearfix:after {

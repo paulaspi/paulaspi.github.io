@@ -35,3 +35,5 @@
     section.sales { grid-template-columns: 1fr 1fr 1fr; }
     
     figure.picbikes { width: 95%;}
+    
+    table { margin-bottom: 30%; }
