@@ -1,5 +1,5 @@
 $.getJSON('data/pricing.json', function(data){
-    console.log(prices);
+    console.log(data);
 
 document.getElementById('tire').innerHTML = prices[0];
 document.getElementById('brake').innerHTML = prices[1];
