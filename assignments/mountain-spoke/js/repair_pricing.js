@@ -1,12 +1,12 @@
-$.getJSON('data/pricing.json', function(prices){
-    console.log(prices);
+$.getJSON('data/pricing.json', function(data){
+    console.log(data);
 
-document.getElementById('tire').innerHTML = prices.prices[0];
-document.getElementById('brake').innerHTML = prices.prices[1];
-document.getElementById('spoke').innerHTML = prices.prices[2];
-document.getElementById('shift').innerHTML = prices.prices[3];
-document.getElementById('gold').innerHTML = prices.prices[4];
-document.getElementById('platinum').innerHTML = prices.prices[5];
+document.getElementById('tire').innerHTML = data.tire;
+document.getElementById('brake').innerHTML = data.brake;
+document.getElementById('spoke').innerHTML = data.spoke;
+document.getElementById('shift').innerHTML = data.shift;
+document.getElementById('gold').innerHTML = data.gold;
+document.getElementById('platinum').innerHTML = data.platinum;
  
 });
 
