@@ -6,7 +6,7 @@ document.getElementById('brake').innerHTML = data.brake;
 document.getElementById('spoke').innerHTML = data.spoke;
 document.getElementById('shift').innerHTML = data.shift;
 document.getElementById('gold').innerHTML = data.gold;
-document.getElementById('platinum').innerHTML = data.platinum;
+document.getElementById('platinum').innerHTML = 'hola';
  
 });
 
