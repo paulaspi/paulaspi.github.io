@@ -125,6 +125,8 @@ figure.pictours h3 { color: #09556d;
                     margin-top: -0.5%;
                     }
 
+.subtitleTour { padding-top: 3%;}
+
 /*styling for events page*/
 .eventDescription {
                 margin: 2%;
@@ -176,7 +178,9 @@ label span {
         margin-top: -2%;
         }
 
-.paraEvent { margin-top: -2%;}
+.paraEvent { margin-top: -2%; }
+
+#date { width: 263px; }
 
 /*styling for sales page*/
 section.sales { display: grid;
@@ -196,15 +200,18 @@ p.price { color: darkred;
 
 .formMessage { margin-bottom: 30%; }
 
+iframe { width: 98%; }
+
 /*table styling*/
 table { width: 70%;
-        margin-left: 5%;
+        margin-left: 10%;
         margin-right: 5%;
         margin-bottom: 50%;
     }
 
 td { text-align: center;
-     border-bottom: 1px solid #d52909;     
+     border-bottom: 1px solid #d52909; 
+    padding: 2%;
     }
 
 th { background-color: #ffdb99; 
