@@ -206,7 +206,7 @@ iframe { width: 98%; }
 table { width: 70%;
         margin-left: 10%;
         margin-right: 5%;
-        margin-bottom: 50%;
+        margin-bottom: 40%;
     }
 
 td { text-align: center;
@@ -214,7 +214,7 @@ td { text-align: center;
     padding: 2%;
     }
 
-th { background-color: #ffdb99; 
+th { 
      border-bottom: 1px solid #d52909; 
      color: #d52909;
     }
