@@ -219,6 +219,8 @@ th {
      color: #d52909;
     }
 
+#overviewVideo { text-align: center; }
+
 /*clearfix prevents elements from collapsing*/		
 .clearfix:after {
 	content: "";
