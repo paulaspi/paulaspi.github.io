@@ -1,13 +1,13 @@
 // create array of link elements with labels
 var weeklyLinks = [{
     label: "Week 1 notes",
-    url: "week1/index.html"},
+    url: "/week1/index.html"},
 
     {label: "Week 2 notes",
-    url: "week2/index.html"
-}]
+    url: "/week2/index.html"
+}];
 
-listWeeklyItems(weeklyLinks, "linkList")
+listWeeklyItems(weeklyLinks, "linkList");
 
 // create the href list 
 function listWeeklyItems(weekItems, listElementName){
@@ -28,7 +28,7 @@ function listWeeklyItems(weekItems, listElementName){
             li.appendChild(anchor);
 
             ol.appendChild(li);
-        })
+        });
     }
 
 }
