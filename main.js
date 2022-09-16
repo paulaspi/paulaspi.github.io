@@ -33,3 +33,5 @@ function listWeeklyItems(weekItems, listElementName){
 
 }
 
+
+//document.getElementById("hola").innerHTML = "Hola";
