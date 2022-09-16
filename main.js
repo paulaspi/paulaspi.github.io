@@ -1,24 +1,35 @@
-/* function to add message below a button. Change text of button once clicked
-function showCongratulations(theButtonClicked){
-    document.getElementById("result_display").innerHTML = 
-        "Congratulations, you did it! You got the page to update!"
-    theButtonClicked.innerHTML = "Click Me Again!"
-}*/
-
+// create array of link elements with labels
 var weeklyLinks = [{
     label: "Week 1 notes",
-    url: "week1/index.html",
+    url: "week1/index.html"},
 
-    label: "Week 2 notes",
-    url: "week2/index.html",
+    {label: "Week 2 notes",
+    url: "week2/index.html"
 }]
 
-var list = document.getElementById(linkList)
-var linkLenght = weeklyLinks.length
+listWeeklyItems(weeklyLinks, "linkList")
 
-for(var i = 0; i < linkLenght; i++){
-    linkList.innerHTML += "<li><a" + weeklyLinks[i] + "/a></li>"
+// create the href list 
+function listWeeklyItems(weekItems, listElementName){
+    let ol = document.getElementById(listElementName);
 
+    // check if the ol element contains an element
+    if(ol){
+        weekItems.forEach(element => {
+
+            //creates the anchor and appends label and url
+            let anchor = document.createElement('a');
+            anchor.innerHTML = element.label;
+            anchor.href = element.url;
+            // makes the link open on a different tab
+            anchor.target = "_blank";
+            // create list element and attach anchor
+            let li = document.createElement('li');
+            li.appendChild(anchor);
+
+            ol.appendChild(li);
+        })
+    }
 
 }
 
