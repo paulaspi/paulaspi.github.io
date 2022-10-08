@@ -8,6 +8,9 @@ var weeklyLinks = [{
 
     {label: "Week 3 Exercises",
     url: "/week3/index.html"}
+
+    {label: "Week 4 Exercises",
+    url: "/week4/index.html"}
 ];
 
 listWeeklyItems(weeklyLinks, "linkList");

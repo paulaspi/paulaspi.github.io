@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extra Exercise Week 4</title>
+</head>
+<body>
+    <h3>Exercise 2 from Eloquent JavaScript Chapter 6</h3>
+
+    <p>Write a class called 'Group' (since 'Set' is already taken). Like Set, it has
+        'add', 'delete', and 'has' methods. Its constructor creates an empty group,
+        'add' adds a value to the group (but only if it isn't already a member),
+        'delete' removes its argument from the group (if it was a member),
+        and 'has' returns a Boolean value indicating whether its argument
+        is a member of the group.
+    </p>
+    <p>Use the === operator, or something equivalent such as 'indexOf', to 
+        determine whether two values are the same.
+    </p>
+    <p>Give the class a static 'from' method that takes an iterable object 
+        as argument and creates a group that contains all the values produced by 
+        iterating over it.</p>
+    <p>See results in console.</p>
+    <script>
+        class Group {
+    // creates an empty array
+    constructor(){
+        this.members = [];
+    }
+
+    // checks if value already exists, if not adds the value
+    add(value){
+        if(!this.has(value)){
+            this.members.push(value);
+        }
+    }
+
+    // deletes the value by creating a new array without the value using 'filter'
+    delete(value){
+        this.members = this.members.filter(v => v !== value);
+    }
+
+    // checks if a value is already present
+    has(value){
+        return this.members.includes(value);
+    }
+
+    // static function that takes an iterable object as argument
+    // and creates a group that contains all the values produced
+    // by iterating over it.
+    static from(collection){
+        let group = new Group;
+        for(let value of collection){
+            group.add(value);
+        }
+        return group;
+    }
+}
+
+let group = Group.from([10, 20]);
+    console.log(group.has(10));
+    console.log(group.has(30));
+
+    group.add(10);
+    group.delete(10);
+    console.log(group.has(10));
+    </script>
+</body>
+</html>
