@@ -1,16 +1,19 @@
 // create array of link elements with labels
 var weeklyLinks = [{
-    label: "Week 1 notes",
+    label: "Week 1 Notes",
     url: "/week1/index.html"},
 
-    {label: "Week 2 notes",
+    {label: "Week 2 Notes",
     url: "/week2/index.html"},
 
     {label: "Week 3 Exercises",
     url: "/week3/index.html"},
 
     {label: "Week 4 Exercises",
-    url: "/week4/index.html"}
+    url: "/week4/index.html"},
+
+    {label: "Week 5 Notes",
+    url: "/week5/index.html"}
 ];
 
 listWeeklyItems(weeklyLinks, "linkList");

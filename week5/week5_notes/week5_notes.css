@@ -1,0 +1,11 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 5%;
+}
+
+hr {
+    height: 3px;
+    border-width:0;
+    color: bisque;
+    background-color: bisque;
+}

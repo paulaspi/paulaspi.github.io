@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 5 Notes</title>
+    <link href="/week5/week5_notes/week5_notes.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+    <h1>Chapter 10: Testing and Debugging</h1>
+    <hr>
+    <p>There are different types of errors:</p>
+    <p><strong>System Error:</strong> a problem with the system or external devices.</p>
+    <p><strong>Programmer Error:</strong> the program has incorrect syntax or faulty logic.</p>
+    <p><strong>User Error:</strong> the user has entered data incorrectly which the program is unable to handle. 
+    Programmer should anticipate user errors and prepare the program to handle them.</p>
+
+    <h3>Exceptions:</h3>
+    <p>An error that produces a return value that can then be used by the program to deal with the error.</p>
+
+    <h3>Stack Trace:</h3>
+    <p>A sequence of functions or methods calls that lead to the point where the error occurred. </p>
+
+    <h3>Warnings:</h3>
+    <p>Can occur if there's an error in the code but it isn't enough to make the program crash.</p>
+
+    <h3>Strict Mode:</h3><p>It produces more exceptions and warnings. It allows to spot errors earlier in the development face.
+        To write in strict mode write the following line at the top of the JS file: 'use strict'.
+    </p>
+
+    <h2>Debugging in the Browser</h2>
+    <p>Find the point in the code where errors occur. Use breakpoints that halt the progress of the code and allow you to see
+        the value of variables at that point in the program.
+    </p>
+
+    <p>There are several options for debugging:</p>
+    <p><strong>Alerts:</strong>the 'alert()' method allows to stop the program to check variables' values. Use currently discouraged.</p>
+
+    <p><strong>Using the console:</strong>the 'console' object provides several methods for logging information and debugging.</p>
+    <p>console.log() => can be used to log the value of variables at different points in the program but it doesn't stop the 
+        program from running.
+    </p>
+    <p>console.trace() => will log an interactive stack trace in the console. Shows the functions that were called in thelead up to an exception occurring.</p>
+
+    <h2>Debugging Tools</h2>
+
+    <p>The <strong>'debugger'</strong> keyword creates a breakpoint in the code that pauses its execution and lets you see where the 
+    program is currently up to. You can see variable values by hovering over them with the mouse. It is important to remove the keywords
+    before shipping code because they will make the code stop.</p>
+
+    <h2>Error Objects</h2>
+    <p>These objects can be created in the code using a constructor function.</p>
+    <p>example: const error = new Error();</p>
+    <p>Takes a parameter that's used as the error message.</p>
+
+    <p>There are seven more error objects used for specific errors:</p>
+    <p><strong>EvalError</strong> => currently not being used. It was used to identify errors when using the 'eval()' function.</p>
+
+    <p><strong>RangeError</strong> => thrown when a number is outside allowable range of values.</p>
+
+    <p><strong>ReferenceError</strong> => when a reference is made to an item that doesn't exist.</p>
+
+    <p><strong>SyntaxError</strong> => there's an error in the code's syntax.</p>
+
+    <p><strong>TypeError</strong> => error in the type of value used.</p>
+
+    <p><strong>URIError</strong> => there's a problem encoding or decoding the URI</p>
+
+    <p><strong>InternalError</strong> => non-standard error. Thrown when an error occurs in the JS engine.</p>
+
+    <p>'error' objects have a number of properties:</p>
+    <p><strong>name</strong> => returns the name of the error constructor function used as a string.</p>
+    <p><strong>message</strong> => returns a description of the error. Should be provided as an argument to the 'Error' constructor function.</p>
+    <p><strong>stack</strong> => returns a stack trace for that error. Not safe to use in production sites.</p>
+
+    <h2>Throwing Exceptions</h2>
+    <p>You can throw your own exceptions using the "throw" statement. Use "throw" with an "error" object.</p>
+
+    <h2>Exception Handling</h2>
+    <p>When an exception occurs, the program stops running. We can handle this situation by catching the error.</p>
+    <p>If we think that a piece of code will result in an exception, we can wrap it in a 'try' block. the code will run as normal
+        but if an error occurs, we can pass the error object to a 'catch' block where we can deal with the error appropriately.
+    </p>
+    <p>A 'finally' block can be added after a 'catch' block. It'll always be executed after the 'try' or 'catch' block, even
+        if an exception doesn't occur.
+    </p>
+
+    <h2>Tests</h2>
+    <p>Writing good tests helps strengthen the code and allows for errors to be caught early.</p>
+
+    <h3>Test-driven Development (TDD)</h3>
+    <p>It means to write tests before writing any actual code.</p>
+    <p>Workflow:</p>
+    <ol>
+        <li>Write tests (that initially fail)</li>
+        <li>Write code to pass the tests</li>
+        <li>Refactor the code</li>
+        <li>Test refactored code</li>
+        <li>Write more tests for new features</li>
+    </ol>
+
+    <h2>Jest</h2>
+    <p>It is a TDD framework created by Facebook. It provides helper methods for common test assertions.</p>
+    <p>Function test() takes two parameters. First parameter is a string  that describes what we are testing. The second 
+        parameter is an anonymous function that contains a function called 'expect()' => This takes the function we are testing
+        as an argument. Returns an expectation object. The expectation object has methods called 'matchers'. Some examples
+        of matcher methods are: 'toBe()' and 'toEqual()'
+    </p>
+
+
+
+</body>
+</html>
