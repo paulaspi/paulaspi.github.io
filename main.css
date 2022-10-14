@@ -17,7 +17,7 @@ li {
 
 a {
     border: 2px solid rgb(133, 212, 248);
-    border-radius: 10%;
+    border-radius: 5px;
     background-color: rgb(133, 212, 248);
     padding: 10px;
     text-decoration: none;

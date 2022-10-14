@@ -13,7 +13,10 @@ var weeklyLinks = [{
     url: "/week4/index.html"},
 
     {label: "Week 5 Notes",
-    url: "/week5/index.html"}
+    url: "/week5/index.html"},
+
+    {label: "Todo challenge",
+    url: "/todo/index.html"}
 ];
 
 listWeeklyItems(weeklyLinks, "linkList");

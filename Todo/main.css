@@ -1,0 +1,53 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-image: url("donald-giannatti-HWTXldFPVKM-unsplash.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgb(156, 127, 63);
+}
+
+.container {
+    display: table;
+    max-width: 350px;
+    width: 100%;
+    margin: 10% auto 0;
+    background-color: beige; /*change background color when adding background image*/
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.header {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color: #ee8208;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+#list {
+    margin: 5px;
+    list-style-type: none;
+    padding: 5px;
+}
+
+#list li {
+    padding: 10px;
+    display: flex;
+    border-bottom: 1px solid #ccc;
+}
+
+.enterTask {
+    padding: 10px;
+    display: flex;
+}
+
+#todoInput {
+    margin: 0 0 0 7px;
+    width: 100%;
+    padding: 5px;
+}
+
