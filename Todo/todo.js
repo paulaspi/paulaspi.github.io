@@ -14,11 +14,16 @@ function renderList(list, element, toDos, hidden){
         let btn = null;
 
         if(hidden && toDo.completed){
-            item.innerHTML = `<label><input type="checkbox" checked><strike>${toDo.content}</strike></label><button class="x">X</button>`;
-        } else {
-            item.innerHTML = `<label><input type="checkbox">${toDo.content}</label><button class="x">X</button>`;
+            item.innerHTML = `<label><input type="checkbox" checked><strike>${toDo.content}</strike></label><button>X</button>`;
+        } else if(hidden && !toDo.completed){
+            item.innerHTML = `<label><input type="checkbox">${toDo.content}</label><button>X</button>`;
+        } else if(!hidden && !toDo.completed){
+            item.innerHTML = `<label><input type="checkbox">${toDo.content}</label><button>X</button>`;
+        } else if(!hidden && toDo.completed){
+            item.innerHTML = `<label><input type="checkbox" checked><strike>${toDo.content}</strike></label><button>X</button>`;
         }
 
+        if(hidden || (!hidden && !toDo.completed)){
         // wire listener to the checkbox
         cBox = item.childNodes[0].childNodes[0];
 
@@ -37,7 +42,9 @@ function renderList(list, element, toDos, hidden){
         }
 
         element.appendChild(item);
+    }
     });
+
 }
 
 function getToDos(key){
@@ -84,7 +91,13 @@ export default class ToDos {
 
         // key for localStorage saving and lookup
         this.key = key;
+
+        // binding the button to the class object
         clickButton("#addTodo", this.newToDo.bind(this));
+        clickButton("#showAll", this.listToDos.bind(this));
+        clickButton("#showCompleted", this.listToDos.bind(this, false));
+        clickButton("#showIncomplete", this.listToDos.bind(this, true));
+
         this.listToDos();
     }
 

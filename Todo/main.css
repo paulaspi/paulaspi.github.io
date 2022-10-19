@@ -21,7 +21,7 @@ body {
 .header {
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
-    background-color: #ee8208;
+    background-color: #db7749;
     color: #fff;
     padding: 10px;
     text-align: center;
@@ -40,8 +40,8 @@ body {
     border-bottom: 1px solid #ccc;
 }
 
-.x {
-    margin-left: 70%;
+#list li > label {
+    flex: 1 0 10em;
 }
 
 .buttons {
