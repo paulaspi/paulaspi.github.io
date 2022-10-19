@@ -13,7 +13,7 @@ body {
     max-width: 350px;
     width: 100%;
     margin: 10% auto 0;
-    background-color: beige; /*change background color when adding background image*/
+    background-color: rgb(250, 250, 245); 
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
 }
@@ -40,7 +40,17 @@ body {
     border-bottom: 1px solid #ccc;
 }
 
+.x {
+    margin-left: 70%;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+}
+
 .enterTask {
+    margin-top: 30px;
     padding: 10px;
     display: flex;
 }
