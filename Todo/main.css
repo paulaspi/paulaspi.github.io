@@ -47,6 +47,15 @@ body {
 .buttons {
     display: flex;
     justify-content: center;
+   
+}
+
+.buttons div {
+    margin-right: 2px;
+}
+
+.buttons input {
+    margin: 2px;
 }
 
 .enterTask {

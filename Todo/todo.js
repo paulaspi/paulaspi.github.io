@@ -3,27 +3,36 @@ import { writeToLS, readFromLS, clickButton } from "./utils.js";
 // storing our list of todos in memory
 let liveToDos = null;
 
-function renderList(list, element, toDos, hidden){
+function renderList(list, element, toDos, string){
     console.log(list);
     element.innerHTML = "";
 
+    let count = 0;
     list.forEach(toDo => {
         const item = document.createElement('li');
 
         let cBox = null;
         let btn = null;
 
-        if(hidden && toDo.completed){
+        let show = true;
+        
+        // count how many checkboxes are not checked and display total number
+        if(!toDo.completed) count++;
+
+        if(string==="all" && toDo.completed){
             item.innerHTML = `<label><input type="checkbox" checked><strike>${toDo.content}</strike></label><button>X</button>`;
-        } else if(hidden && !toDo.completed){
+        } else if(string==="all" && !toDo.completed){
             item.innerHTML = `<label><input type="checkbox">${toDo.content}</label><button>X</button>`;
-        } else if(!hidden && !toDo.completed){
+        } else if(string==="incomplete" && !toDo.completed){
             item.innerHTML = `<label><input type="checkbox">${toDo.content}</label><button>X</button>`;
-        } else if(!hidden && toDo.completed){
+        } else if(string==="comp" && toDo.completed){
             item.innerHTML = `<label><input type="checkbox" checked><strike>${toDo.content}</strike></label><button>X</button>`;
+        } else{
+            show = false;
         }
 
-        if(hidden || (!hidden && !toDo.completed)){
+
+        if(show){
         // wire listener to the checkbox
         cBox = item.childNodes[0].childNodes[0];
 
@@ -43,9 +52,11 @@ function renderList(list, element, toDos, hidden){
 
         element.appendChild(item);
     }
+    window.manyLeft.innerHTML = count + " tasks left ";
     });
 
 }
+
 
 function getToDos(key){
     if(liveToDos === null) {
@@ -94,9 +105,9 @@ export default class ToDos {
 
         // binding the button to the class object
         clickButton("#addTodo", this.newToDo.bind(this));
-        clickButton("#showAll", this.listToDos.bind(this));
-        clickButton("#showCompleted", this.listToDos.bind(this, false));
-        clickButton("#showIncomplete", this.listToDos.bind(this, true));
+        clickButton("#showAll", this.listToDos.bind(this, "all"));
+        clickButton("#showIncompleted", this.listToDos.bind(this, "incomplete"));
+        clickButton("#showComplete", this.listToDos.bind(this, "comp"));
 
         this.listToDos();
     }
@@ -123,7 +134,8 @@ export default class ToDos {
         if(toDo){
             toDo.completed = !toDo.completed;
             writeToLS(this.key, liveToDos);
-            renderList(liveToDos, this.listElement, this, true);
+            //renderList(liveToDos, this.listElement, this);
+            this.listToDos();
         }
     }
 
@@ -133,11 +145,12 @@ export default class ToDos {
 
         if(toDo){
             deleteToDo(id, this.key);
-            renderList(liveToDos, this.listElement, this, true);
+            //renderList(liveToDos, this.listElement, this);
+            this.listToDos();
         }
     }
 
-    listToDos(hidden = true){
-        renderList(getToDos(this.key), this.listElement, this, hidden);
+    listToDos(string="all"){
+        renderList(getToDos(this.key), this.listElement, this, string);
     }
 }
