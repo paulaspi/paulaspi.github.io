@@ -6,7 +6,7 @@ const links = [
 
     {
         label: "Group Project",
-        url: "week7/groupProject.html"
+        url: "./group_project_w7/hiking-complete.html"
     }
 ]
 
